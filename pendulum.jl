@@ -89,7 +89,7 @@ function full_position(p::Pendulum, sol::DESolution; dt = 0.01, l1 = p.l1[], l2 
       Point2f.(x1 + l2 * sin.(p2), y1 - l2 * cos.(p2))
     ]
 end
-#=
+
 @time begin
     n1, n2 = pi/2 + pi * rand(), pi/2 + pi * rand()
     a = Pendulum.(n1 .+ range(0, 0.01, 2), n2);
@@ -131,7 +131,7 @@ ax.aspect = DataAspect()
 
 f, ax = scatter(Point2f(0), color = :white, figure = (size = (1000,1000),))
 
-for _ in 1:10
+for _ in 1:3
     @time begin
         n1, n2 = pi/2 + pi * rand(), pi/2 + pi * rand()
         a = Pendulum.(n1 .+ range(0, 0.01, 500), n2);
@@ -154,5 +154,3 @@ end
 
 hidedecorations!(ax)
 tightlimits!(ax)
-
-=#
