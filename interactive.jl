@@ -9,6 +9,8 @@ xs = range(xrange..., res)
 ys = range(yrange..., res)
 zs = readdlm("geet.csv", '\t', Float32, '\n')
 
+n1 = xs[findmin(zs)[2][1]]
+n2 = ys[findmin(zs)[2][2]]
 
 zs .-= minimum(zs)
 zs ./= maximum(zs)
