@@ -1,4 +1,4 @@
-include("lyapunov.jl")
+include("lyapunov manual.jl")
 include("Vars.jl")
 using DelimitedFiles, ProgressMeter
 using .Vars
@@ -27,4 +27,4 @@ end
 end
 =#
 
-writedlm("geet.csv", zs)
+# writedlm("geet.csv", zs)
